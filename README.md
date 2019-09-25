@@ -5,7 +5,7 @@
 - [Project Overview](#overview)
 
 
-![Disaster Response App](gif/disater.gif)
+![Disaster Response App](gif/disaster.gif)
 
 
 <a id='overview'></a>

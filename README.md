@@ -33,19 +33,21 @@ File _data/process_data.py_ contains data cleaning pipeline that:
 - Loads the `messages` and `categories` dataset
 - Merges the two datasets
 - Cleans the data
-- Stores it in a **SQLite database**
+- Stores it in a SQLite database
+- [Back to Table of Content](#index)
 
 <a id='ml_pipeline'></a>
 ### 2.2. ML Pipeline
 
 File _models/train_classifier.py_ contains machine learning pipeline that:
 
-- Loads data from the **SQLite database**
+- Loads data from the SQLite database
 - Splits the data into training and testing sets
 - Builds a text processing and machine learning pipeline
 - Trains and tunes a model using GridSearchCV
 - Outputs result on the test set
 - Exports the final model as a pickle file
+- [Back to Table of Content](#index)
 
 <a id='flask'></a>
 ### 2.3. Flask Web App
@@ -77,18 +79,21 @@ The web app provides the following visualizations related to dataset:
 **_Messages and categories counts_**
 
 ![Messages and categories counts](gif/graph5.PNG)
+- [Back to Table of Content](#index)
 
+<a id='category'></a>
+#### 2.3.2. Message  Categoriztion
+The web app provides the following visualizations related to dataset:
 
+The web app lets an user enter an emergency message during a natural disaster, e.g. _"We're asking for water, medical supply, food"_.
 
-<a id='eg'></a>
-Running [this command](#com) **from app directory** will start the web app where users can enter their query, i.e., a request message sent during a natural disaster, e.g. _"We're asking for water, medical supply, food"_.
-
-**_Screenshot 1_**
+**_New Message_**
 
 ![New Message](gif/new.PNG)
 
-What the app will do is that it will classify the text message into categories so that appropriate relief agency can be reached out for help.
+After sumitting the message, the web app will classify the message into categories so that appropriate relief agency can be reached out for help.
 
-**_Screenshot 2_**
+**_Message Categorization_**
 
 ![results](gif/result.PNG)
+- [Back to Table of Content](#index)

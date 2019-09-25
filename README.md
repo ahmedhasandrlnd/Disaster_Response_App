@@ -79,7 +79,7 @@ The web app provides the following visualizations related to dataset:
 **_Messages and categories counts_**
 
 ![Messages and categories counts](gif/graph5.PNG)
-- [Back to Table of Content](#index)
+												- [Back to Table of Content](#index)
 
 <a id='category'></a>
 #### 2.3.2. Message  Categoriztion

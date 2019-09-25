@@ -1,6 +1,7 @@
 # Disaster Response App
 
-## [Table of Contents](#index)
+<a id='index'></a>
+## Table of Contents
 - [Project Overview](#overview)
 
 

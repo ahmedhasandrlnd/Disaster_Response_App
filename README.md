@@ -8,11 +8,13 @@
   - [ML Pipeline](#ml_pipeline)
   - [Flask Web App](#flask)
   	- [Dataset Visualization](#visual)
-  	- [Message categorization](#category)
+  	- [Message Categorization](#category)
 - [Usage Instructions](#run)
   - [Data Cleaning](#cleaning)
   - [Training Classifier](#training)
   - [Starting the Web App](#starting)
+  	- [Running in localhost](#local)
+  	- [ngrok Deployment](#ngrok)
 
 <a id='video'></a>
 **_Video Demo of the deployed App_**
@@ -155,6 +157,9 @@ This will use cleaned data to train the model, improve the model with grid searc
 
 ### 3.3. Starting the web app
 
+<a id='local'></a>
+#### 3.3.1. Running in localhost
+
 Now that we have cleaned the data and trained our model. Now it's time to see the prediction in a user friendly way.
 
 Go the app directory and run the following command:
@@ -167,6 +172,8 @@ python disaster_prediction.py
 
 This will start the web app and will direct you to a URL (_http://localhost:5000_) where you can enter messages and get classification results for it.
 
+<a id='ngrok'></a>
+#### 3.3.2. ngrok Deployment
 
 To access our local running web app from a public endpoint such as Internet, we have used _ngrok_ which is a multiplatform tunnelling, reverse proxy software. After running the _ngrok_ program, we enter the command:
 

@@ -13,7 +13,7 @@
   - [Data Cleaning](#cleaning)
   - [Training Classifier](#training)
   - [Starting the Web App](#starting)
-  
+
 **_Video Demo of App_**
 ![Disaster Response App](gif/disaster.gif)
 <hr/> 
@@ -164,8 +164,5 @@ Go the app directory and run the following command:
 python disaster_prediction.py
 ```
 
-This will start the web app and will direct you to a URL where you can enter messages and get classification results for it.
+This will start the web app and will direct you to a URL (_http://localhost:5000_) where you can enter messages and get classification results for it.
 
-**_Screenshot 6_**
-
-![web_app](img/web_app.jpg)

@@ -13,7 +13,8 @@
   - [Data Cleaning](#cleaning)
   - [Training Classifier](#training)
   - [Starting the Web App](#starting)
-
+  
+**_Video Demo of App_**
 ![Disaster Response App](gif/disaster.gif)
 <hr/> 
 
@@ -73,23 +74,23 @@ The Flask web app serves two purposes:
 #### 2.3.1. Data Visualization
 The web app provides the following visualizations related to dataset:
 
-**_Distribution of message genres_**
+**_Screenshot: Distribution of message genres_**
 
 ![Distribution of message genres](gif/graph1.PNG)
 
-**_Distribution of message genres_**
+**_Screenshot: Distribution of message genres_**
 
 ![Distribution of message genres](gif/graph2.PNG)
 
-**_Distribution of messages lengths_**
+**_Screenshot: Distribution of messages lengths_**
 
 ![Distribution of messages lengths](gif/graph3.PNG)
 
-**_Correlation of message categories_**
+**_Screenshot: Correlation of message categories_**
 
 ![Correlation of message categorie](gif/graph4.PNG)
 
-**_Messages and categories counts_**
+**_Screenshot: Messages and categories counts_**
 
 ![Messages and categories counts](gif/graph5.PNG)
 <hr/> 
@@ -98,17 +99,15 @@ The web app provides the following visualizations related to dataset:
 
 <a id='category'></a>
 #### 2.3.2. Message  Categoriztion
-The web app provides the following visualizations related to dataset:
-
 The web app lets an user enter an emergency message during a natural disaster, e.g. _"We're asking for water, medical supply, food"_.
 
-**_New Message_**
+**_Screenshot: New Message_**
 
 ![New Message](gif/new.PNG)
 
 After sumitting the message, the web app will classify the message into categories so that appropriate relief agency can be reached out for help.
 
-**_Message Categorization_**
+**_Screenshot: Message Categorization_**
 
 ![results](gif/result.PNG)
 <hr/> 
@@ -117,7 +116,7 @@ After sumitting the message, the web app will classify the message into categori
 
 <a id='run'></a>
 
-## 3. Running
+## 3. Usage Instructions
 
 There are three steps to get up and runnning with the web app if you want to start from ETL process.
 
@@ -125,15 +124,13 @@ There are three steps to get up and runnning with the web app if you want to sta
 
 ### 3.1. Data Cleaning
 
-**Go to the project directory** and the run the following command:
+Go to the project directory and the run the following command:
 
 ```
 python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db
 ```
 
 The first two arguments are input data and the third argument is the SQLite Database in which we want to save the cleaned data. The ETL pipeline is in _process_data.py_.
-
-_DisasterResponse.db_ already exists in _data_ folder but the above command will still run and replace the file with same information. 
 <hr/> 
 
 [Back to Table of Content](#index)
@@ -142,7 +139,7 @@ _DisasterResponse.db_ already exists in _data_ folder but the above command will
 
 ### 3.2. Training Classifier
 
-After the data cleaning process, run this command **from the project directory**:
+After the data cleaning process, run this command from the project directory:
 
 ```
 python models/train_classifier.py data/DisasterResponse.db models/model.pkl
@@ -152,3 +149,23 @@ This will use cleaned data to train the model, improve the model with grid searc
 <hr/> 
 
 [Back to Table of Content](#index)
+
+<a id='starting'></a>
+
+### 3.3. Starting the web app
+
+Now that we have cleaned the data and trained our model. Now it's time to see the prediction in a user friendly way.
+
+Go the app directory and run the following command:
+
+<a id='com'></a>
+
+```
+python disaster_prediction.py
+```
+
+This will start the web app and will direct you to a URL where you can enter messages and get classification results for it.
+
+**_Screenshot 6_**
+
+![web_app](img/web_app.jpg)

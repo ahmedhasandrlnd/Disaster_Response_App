@@ -185,7 +185,7 @@ To access our local running web app from a public endpoint such as Internet, we 
 ngrok http 5000
 ``` 
 
-This will create a temporary URL _(http://37ca28eb.ngrok.io)_ via which we can access our web app running in our local computer from other computers [see video demo](#video)
+This will create a temporary URL _(http://37ca28eb.ngrok.io)_ via which we can access our web app running in our local computer from other computers. See [video demo](#video).
 
 **_Screenshot: ngrok reverse tunnelling_**
 

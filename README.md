@@ -166,3 +166,18 @@ python disaster_prediction.py
 
 This will start the web app and will direct you to a URL (_http://localhost:5000_) where you can enter messages and get classification results for it.
 
+
+To access our local running web app from a public endpoint such as Internet, we have used _ngrok_ which is a multiplatform tunnelling, reverse proxy software. After running the _ngrok_ program, we enter the command:
+
+```
+ngrok http 5000
+``` 
+
+This will create a temporary URL _(http://37ca28eb.ngrok.io)_ via which we can access our web app running in our local computer from other computers
+
+**_Screenshot: ngrok reverse tunnelling_**
+
+![results](gif/ngrok1.PNG)
+<hr/> 
+
+[Back to Table of Content](#index)

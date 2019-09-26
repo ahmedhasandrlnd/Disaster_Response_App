@@ -30,7 +30,7 @@
 
 <a id='overview'></a>
 ## Project Overview
-Following a disaster, different organizations will try to respond to different problems of the disaster. Some will take care about water, other will take care about blocked roads and another will take care about medical supplies. So it is quite important to filter out a relevant message for a particular organization quickly and effectively from thousands of communications which happed either via social media or directly to disaster relief organizations. <br/> <br/>
+Following a disaster, different organizations will try to respond to different problems of the disaster. Some will take care about water, other will take care about blocked roads and another will take care about medical supplies. So it is quite important to filter out a relevant message for a particular organization quickly and effectively from thousands of communications which happen either via social media or directly to disaster relief organizations. <br/> <br/>
 Figure Eight has created a dataset that contains about 30,000 messages drawn from events including an earthquake in Haiti in 2010, an earthquake in Chile in 2010, floods in Pakistan in 2010, super-storm Sandy in the U.S.A. in 2012, and news articles spanning a large number of years and 100s of different disasters. The data has been encoded with 36 different categories related to disaster response and has been stripped of messages with sensitive information in their entirety.<br/> <br/>
 This web app uses a supervised machine learning model to classify new messages to 36 different categories. This web app also extract data from this dataset to provide data visualizations. ML is critical in helping different organizations to understand which messages are relevant to them and which message to prioritize.  We want to investigate new trends and new way of building machine learning models that can help us respond to future disasters.  <br/>
 <hr/> 
@@ -112,7 +112,7 @@ The web app lets an user enter an emergency message during a natural disaster, e
 
 ![New Message](gif/new.PNG)
 
-After sumitting the message, the web app will classify the message into categories so that appropriate relief agency can be reached out for help.
+After submitting the message, the web app will classify the message into categories so that appropriate relief agency can be reached out for help.
 
 **_Screenshot: Message Categorization_**
 
@@ -138,6 +138,10 @@ python data/process_data.py data/disaster_messages.csv data/disaster_categories.
 ```
 
 The first two arguments are input data and the third argument is the SQLite Database in which we want to save the cleaned data. The ETL pipeline is in _process_data.py_.
+
+**_Screenshot: Data Claening_**
+
+![results](gif/cleaning.PNG)
 <hr/> 
 
 [Back to Table of Content](#index)
@@ -198,7 +202,13 @@ This will create a temporary URL _(http://37ca28eb.ngrok.io)_ via which we can a
 
 ## 4. Conclusion
 
-As we can see from the [distribution of messages categories](#imbalance), the dataset is highly imbalanced. Though the accuracy metric is high, it has a poor value for recall. Also, some of the messages in the dataset seemed mislabelled.  So, in order to overcome these limitations, we need to take more examples for the less represented categories and need to do some manual clean-up of some mislabelled messages. Also, we have to use micro-averaging or weighted-averaging in our evaluation rather than macro-averaging.
+As we can see from the [distribution of messages categories](#imbalance), the dataset is highly imbalanced. It gives a very interesting evaluation results as given below:
+
+**_Screenshot: Evaluation Matrix_**
+
+![results](gif/eval.PNG)
+
+ Also, some of the messages in the dataset seemed mislabelled.  So, in order to overcome these limitations, we need to take more examples for the less represented categories and need to do some manual clean-up of some mislabelled messages. Also, we have to use micro-averaging or weighted-averaging in our evaluation rather than macro-averaging.
 
 
 <a id='sw'></a>

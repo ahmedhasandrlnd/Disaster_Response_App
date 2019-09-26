@@ -210,12 +210,17 @@ As we can see from the [distribution of messages categories](#imbalance), the da
 ![results](gif/eval.PNG)
 
  It is evident that some of the highly represented categories have low evaluation scores while some of the less represented categories have very high scores. Since there are very few 1s in these less represented categories and so their metrics are still high even if they are all classified as 0s. As a result, it's important to not be too influenced by these values. It seems reasonable to seek to improve the performance of the original "lowest" performing categories.Also, some of the messages in the dataset seemed mislabelled.  So, in order to overcome these limitations, we need to take more examples for the less represented categories and need to do some manual clean-up of some mislabelled messages. Also, we have to use micro-averaging or weighted-averaging in our evaluation rather than macro-averaging.
+<hr/> 
 
+[Back to Table of Content](#index)
 
 <a id='sw'></a>
 
 ## 5. Software Requirements
 This project uses **Python 3.6.6** and the necessary libraries are mentioned in _requirements.txt_.
+<hr/> 
+
+[Back to Table of Content](#index)
 
 <a id='files'></a>
 
@@ -260,6 +265,9 @@ This project uses **Python 3.6.6** and the necessary libraries are mentioned in 
 \---models
         train_classifier.py		# performs classification task
 </pre>
+<hr/> 
+
+[Back to Table of Content](#index)
 
 <a id='credits'></a>
 
@@ -268,3 +276,7 @@ This project uses **Python 3.6.6** and the necessary libraries are mentioned in 
 The web app is designed by following [Flask tutorials](https://www.youtube.com/playlist?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH) by Corey Schafer.
 
 This github page is inspired by [this page](https://github.com/sanjeevai/disaster-response-pipeline).
+
+<hr/> 
+
+[Back to Table of Content](#index)

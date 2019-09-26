@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block content %}
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="article-metadata">
+          <small class="text-muted" > Posted By: {{ msg.author }}</small>
+          <small class="text-muted"> on {{ msg.date_posted.strftime('%c') }}</small>
+          <div>
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('update_msg', msg_id=msg.id) }}">Update</a>
+            <button type="button" class="btn btn-danger btn-sm m-1" data-toggle="modal" data-target="#deleteModal">Delete</button>
+          </div>
+        </div>
+
+        <h2 class="article-title">{{ msg.title }}</h2>
+        <p class="article-content">{{ msg.content }}</p>
+        <h5 class="article-title"> Needs attention to the following categories: </h5>
+        <div class="row">
+          {% for cat in cats %}
+            {% if msg[cat]==1%}
+              <div class="media col-sm-6">
+                <img class="article-img align-self-center m-1 p-2" src="{{ url_for('static', filename='msg_pics/' + cat+'.png') }}">
+                <div class="media-body"><h7 class="list-group-item list-group-item-success text-center pt-3 pb-3">{{ cat }}</h7></div>
+              </div>
+            {% endif %}
+          {% endfor %}
+
+        </div>
+      </div>
+    </article>
+
+  <!-- Modal -->
+  <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLabel">Delete Message?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <form action="{{ url_for('delete_msg', msg_id=msg.id) }}" method="POST">
+            <input class="btn btn-danger" type="submit" value="Delete">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{%endblock content%}

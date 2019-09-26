@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for msg in msgs.items %}
+        <article class="media content-section">
+          
+          <div class="media-body">
+            <div class="article-metadata">
+              <small class="text-muted" > Posted By: {{ msg.author }}</small>
+              <small class="text-muted"> on {{ msg.date_posted.strftime('%c') }}</small>
+            </div>
+
+            <h2><a class="article-title" href="{{url_for('msg',msg_id=msg.id)}}">{{ msg.title }}</a></h2>
+            <p class="article-content">{{ msg.content }}</p>
+            <h5 class="article-title"> Needs attention regarding the following categories: </h5>
+            <div class="row">
+              {% for cat in cats %}
+                {% if msg[cat]==1%}
+                  <div class="media col-sm-6">
+                    <img class="article-img align-self-center m-1 p-2" src="{{ url_for('static', filename='msg_pics/' + cat+'.png') }}">
+                    <div class="media-body"><h7 class="list-group-item list-group-item-success text-center pt-3 pb-3">{{ cat }}</h7></div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+
+            </div>
+          </div>
+        </article>
+    {% endfor %}
+    {% for page_num in msgs.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+      {% if page_num %}
+        {% if msgs.page == page_num %}
+           <a class="btn btn-info mb-4" href="{{ url_for('home', page=page_num) }}">{{ page_num }}</a>
+        {% else %}
+           <a class="btn btn-outline-info mb-4" href="{{ url_for('home', page=page_num) }}">{{ page_num }}</a>
+        {% endif %}
+      {% else %}
+         ...
+      {% endif %}
+    {% endfor %}
+{% endblock content %}

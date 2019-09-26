@@ -11,6 +11,9 @@
   	- [Message categorization](#category)
 
 ![Disaster Response App](gif/disaster.gif)
+<hr/> 
+
+[Back to Table of Content](#index)
 
 
 <a id='overview'></a>
@@ -19,6 +22,7 @@ Following a disaster, different organizations will try to respond to different p
 Figure Eight has created a dataset that contains about 30,000 messages drawn from events including an earthquake in Haiti in 2010, an earthquake in Chile in 2010, floods in Pakistan in 2010, super-storm Sandy in the U.S.A. in 2012, and news articles spanning a large number of years and 100s of different disasters. The data has been encoded with 36 different categories related to disaster response and has been stripped of messages with sensitive information in their entirety.<br/> <br/>
 This web app uses a supervised machine learning model to classify new messages to 36 different categories. This web app also extract data from this dataset to provide data visualizations. ML is critical in helping different organizations to understand which messages are relevant to them and which message to prioritize.  We want to investigate new trends and new way of building machine learning models that can help us respond to future disasters.  <br/>
 <hr/> 
+
 [Back to Table of Content](#index)
 
 <a id='components'></a>
@@ -36,6 +40,7 @@ File _data/process_data.py_ contains data cleaning pipeline that:
 - Cleans the data
 - Stores it in a SQLite database
 <hr/> 
+
 [Back to Table of Content](#index)
 
 <a id='ml_pipeline'></a>
@@ -50,6 +55,7 @@ File _models/train_classifier.py_ contains machine learning pipeline that:
 - Outputs result on the test set
 - Exports the final model as a pickle file
 <hr/> 
+
 [Back to Table of Content](#index)
 
 <a id='flask'></a>
@@ -83,6 +89,7 @@ The web app provides the following visualizations related to dataset:
 
 ![Messages and categories counts](gif/graph5.PNG)
 <hr/> 
+
 [Back to Table of Content](#index)
 
 <a id='category'></a>
@@ -101,4 +108,5 @@ After sumitting the message, the web app will classify the message into categori
 
 ![results](gif/result.PNG)
 <hr/> 
+
 [Back to Table of Content](#index)

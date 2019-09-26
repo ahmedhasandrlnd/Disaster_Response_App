@@ -15,6 +15,10 @@
   - [Starting the Web App](#starting)
   	- [Running in localhost](#local)
   	- [ngrok Deployment](#ngrok)
+- [Conclusion](#conclusion)
+- [Software Requirements](#sw)
+- [Credits and Acknowledgements](#credits)
+
 
 <a id='video'></a>
 **_Video Demo of the deployed App_**
@@ -80,10 +84,10 @@ The web app provides the following visualizations related to dataset:
 **_Screenshot: Distribution of message genres_**
 
 ![Distribution of message genres](gif/graph1.PNG)
+<a id='imbalance'></a>
+**_Screenshot: Distribution of message categories_**
 
-**_Screenshot: Distribution of message genres_**
-
-![Distribution of message genres](gif/graph2.PNG)
+![Distribution of message categories](gif/graph2.PNG)
 
 **_Screenshot: Distribution of messages lengths_**
 
@@ -189,3 +193,23 @@ This will create a temporary URL _(http://37ca28eb.ngrok.io)_ via which we can a
 <hr/> 
 
 [Back to Table of Content](#index)
+
+<a id='conclusion'></a>
+
+## 4. Conclusion
+
+As we can see from the [distribution of messages categories](#imbalance), the dataset is highly imbalanced. Though the accuracy metric is high, it has a poor value for recall. Also, some of the messages in the dataset seemed mislabelled.  So, in order to overcome these limitations, we need to take more examples for the less represented categories and need to do some manual clean-up of some mislabelled messages. Also, we have to use micro-averaging or weighted-averaging in our evaluation rather than macro-averaging.
+
+
+<a id='sw'></a>
+
+## 5. Software Requirements
+This project uses **Python 3.6.6** and the necessary libraries are mentioned in _requirements.txt_.
+
+<a id='credits'></a>
+
+## 6. Credits and Acknowledgements
+
+The web app is designed by following [Flask tutorials](https://www.youtube.com/playlist?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH) by Corey Schafer.
+
+This github page is inspired by [this page](https://github.com/sanjeevai/disaster-response-pipeline).

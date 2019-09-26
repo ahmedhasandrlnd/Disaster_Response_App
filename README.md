@@ -220,9 +220,9 @@ This project uses **Python 3.6.6** and the necessary libraries are mentioned in 
 <a id='files'></a>
 
 ## 6. Files
-```
+<pre>
 +
-|   README.md        			# Readme file
+|   README.md 					# Readme file
 |   requirements.txt			# Required packages
 |   
 +---app
@@ -258,8 +258,8 @@ This project uses **Python 3.6.6** and the necessary libraries are mentioned in 
 |       Images folder used in Readme.md
 |       
 \---models
-        train_classifier.py		# performs calssification task
-```
+        train_classifier.py		# performs classification task
+</pre>
 
 <a id='credits'></a>
 

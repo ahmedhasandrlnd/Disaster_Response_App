@@ -208,7 +208,7 @@ As we can see from the [distribution of messages categories](#imbalance), the da
 
 ![results](gif/eval.PNG)
 
- It is evident that some of the highly represented categories have low evaluation scores while some of the lowly represented categories have very high scores. Since there are very few 1s in these lowly represented categories and so their metrics are still high even if they are all classified as 0s. As a result, it's important to not be too influenced by these values. It seems reasonable to seek to improve the performance of the original "lowest" performing categories.Also, some of the messages in the dataset seemed mislabelled.  So, in order to overcome these limitations, we need to take more examples for the less represented categories and need to do some manual clean-up of some mislabelled messages. Also, we have to use micro-averaging or weighted-averaging in our evaluation rather than macro-averaging.
+ It is evident that some of the highly represented categories have low evaluation scores while some of the less represented categories have very high scores. Since there are very few 1s in these less represented categories and so their metrics are still high even if they are all classified as 0s. As a result, it's important to not be too influenced by these values. It seems reasonable to seek to improve the performance of the original "lowest" performing categories.Also, some of the messages in the dataset seemed mislabelled.  So, in order to overcome these limitations, we need to take more examples for the less represented categories and need to do some manual clean-up of some mislabelled messages. Also, we have to use micro-averaging or weighted-averaging in our evaluation rather than macro-averaging.
 
 
 <a id='sw'></a>

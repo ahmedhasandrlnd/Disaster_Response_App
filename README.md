@@ -17,6 +17,7 @@
   	- [ngrok Deployment](#ngrok)
 - [Conclusion](#conclusion)
 - [Software Requirements](#sw)
+- [Files](#files)
 - [Credits and Acknowledgements](#credits)
 
 
@@ -216,9 +217,53 @@ As we can see from the [distribution of messages categories](#imbalance), the da
 ## 5. Software Requirements
 This project uses **Python 3.6.6** and the necessary libraries are mentioned in _requirements.txt_.
 
+<a id='files'></a>
+
+## 6. Files
+```
++
+|   README.md        			# Readme file
+|   requirements.txt			# Required packages
+|   
++---app
+|   |   disaster_response.py	# Flask file that runs the app
+|   |   forms.py				# Forms used in the app
+|   |   site.db					# database to save user's messages
+|   |   
+|   +---static
+|   |   |   main.css    		# main stylesheet
+|   |   |   
+|   |   \---msg_pics
+|   |           msg_pics.zip	# image folder used in the app
+|   |           
+|   \---templates
+|           about.html			# about page
+|           create_msg.html		# new message page
+|           graph1.html			# graph1 page
+|           graph2.html			# graph2 page
+|           graph3.html			# graph3 page
+|           graph4.html			# graph4 page
+|           graph5.html			# graph5 page
+|           home.html			# home page
+|           layout.html			# layout page
+|           msg.html			# message page
+|           
++---data
+|       DisasterResponse.db  	# cleaned database
+|       disaster_categories.csv	# given categories dataset
+|       disaster_messages.csv	# given messages dataset
+|       process_data.py			# performs ELT pipeline
+|       
++---gif
+|       Images folder used in Readme.md
+|       
+\---models
+        train_classifier.py		# performs calssification task
+```
+
 <a id='credits'></a>
 
-## 6. Credits and Acknowledgements
+## 7. Credits and Acknowledgements
 
 The web app is designed by following [Flask tutorials](https://www.youtube.com/playlist?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH) by Corey Schafer.
 
